@@ -13,7 +13,7 @@ app = Flask(__name__)
 CORS(app, origins="*")  # Allow all origins
 
 # Load your trained YOLO model
-model = YOLO("Eagle-1(Chocolate)\my_model.pt")
+model = YOLO("my_model.pt")
 
 @app.route('/detect', methods=['POST', 'OPTIONS'])
 def detect():
