@@ -1,3 +1,6 @@
+import os
+os.environ["CUDA_VISIBLE_DEVICES"] = ""  # Force CPU
+
 from flask import Flask, request, send_file
 from flask_cors import CORS
 from ultralytics import YOLO
