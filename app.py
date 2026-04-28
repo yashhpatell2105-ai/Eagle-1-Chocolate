@@ -15,7 +15,7 @@ app = Flask(__name__)
 CORS(app, origins="*")
  
 # ── Load your local model ──
-model = YOLO("Eagle-1(Chocolate)\my_model.pt")
+model = YOLO("my_model.pt")
  
  
 # ── Route 1: Returns annotated image ──
