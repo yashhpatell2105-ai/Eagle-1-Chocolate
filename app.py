@@ -13,6 +13,16 @@ from PIL import Image
  
 app = Flask(__name__)
 CORS(app, origins="*")
+
+@app.route('/', methods=['GET'])
+def home():
+    return jsonify({
+        "status": "🚀 Falcon Technology API is running!",
+        "endpoints": {
+            "detect": "/detect (POST)",
+            "summary": "/detect_summary (POST)"
+        }
+    })
  
 # ── Load your local model ──
 model = YOLO("my_model.pt")
